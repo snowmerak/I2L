@@ -4,7 +4,7 @@ import (
 	"context"
 	"flag"
 	"fmt"
-	"i2l"
+	"github.com/snowmerak/I2L"
 	"os"
 	"os/signal"
 )

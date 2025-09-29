@@ -3,7 +3,7 @@ package i2l
 import (
 	"context"
 	"fmt"
-	"i2l/models"
+	"github.com/snowmerak/I2L/models"
 	"os"
 
 	"github.com/firebase/genkit/go/ai"
