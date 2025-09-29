@@ -44,7 +44,7 @@ export GEMINI_API_KEY="YOUR_API_KEY"
 
 ```bash
 # 리모드 설치
-go install github.com/snowmerak/i2l/i2l@latest
+go install github.com/snowmerak/I2L/i2l@latest
 i2l -f <입력_파일> -l <대상_언어> [-o <출력_파일> -p <AI_공급자>]
 
 # 코드 클론한 후
