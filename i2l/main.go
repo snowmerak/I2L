@@ -12,8 +12,8 @@ import (
 func main() {
 	inputFile := flag.String("f", "", "Path to the source code file to analyze.")
 	targetLang := flag.String("l", "", "Target language for code generation.")
-	outputFile := flag.String("o", "", "Name of the output file to save the generated code.")
-	provider := flag.String("p", "google", "The AI provider to use. 'google' or 'ollama'.")
+	outputFile := flag.String("o", "code.out", "Name of the output file to save the generated code.")
+	provider := flag.String("p", "ollama", "The AI provider to use. 'google' or 'ollama'.")
 	flag.Parse()
 
 	if *inputFile == "" || *targetLang == "" || *outputFile == "" {

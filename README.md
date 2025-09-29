@@ -38,16 +38,32 @@ Google AI 모델을 사용하려면, 환경 변수에 API 키를 설정해야 �
 export GEMINI_API_KEY="YOUR_API_KEY"
 ```
 
-### 예제 실행
+### CLI 도구 사용
 
-`i2l/` 디렉토리에서 예제 코드를 실행할 수 있습니다.
+`i2l/` 디렉토리에서 CLI 도구를 실행할 수 있습니다.
 
 ```bash
 cd i2l
-go run .
+go run . -f <입력_파일> -l <대상_언어> -o <출력_파일> [-p <AI_공급자>]
 ```
 
-실행 결과로 코드에서 추출된 그래프 튜플과, 이를 바탕으로 생성된 Java 코드를 확인할 수 있습니다.
+**플래그 설명:**
+- `-f`: 분석할 소스 코드 파일 경로
+- `-l`: 생성할 대상 언어 (예: Java, Python, C#, etc.)
+- `-o`: 생성된 코드를 저장할 출력 파일 경로
+- `-p`: AI 공급자 선택 (`google` 또는 `ollama`, 기본값: `google`)
+
+**사용 예제:**
+
+```bash
+# Google AI를 사용하여 Go 코드를 Java로 변환
+go run . -f example.go -l Java -o result.java
+
+# Ollama를 사용하여 Go 코드를 Python으로 변환
+go run . -f example.go -l Python -o result.py -p ollama
+```
+
+실행 결과로 코드에서 추출된 그래프 튜플과, 이를 바탕으로 생성된 코드를 확인할 수 있습니다.
 
 ## 사용법
 
