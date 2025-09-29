@@ -43,15 +43,20 @@ export GEMINI_API_KEY="YOUR_API_KEY"
 `i2l/` 디렉토리에서 CLI 도구를 실행할 수 있습니다.
 
 ```bash
+# 리모드 설치
+go install github.com/snowmerak/i2l/i2l@latest
+i2l -f <입력_파일> -l <대상_언어> [-o <출력_파일> -p <AI_공급자>]
+
+# 코드 클론한 후
 cd i2l
-go run . -f <입력_파일> -l <대상_언어> -o <출력_파일> [-p <AI_공급자>]
+go run . -f <입력_파일> -l <대상_언어> [-o <출력_파일> -p <AI_공급자>]
 ```
 
 **플래그 설명:**
 - `-f`: 분석할 소스 코드 파일 경로
 - `-l`: 생성할 대상 언어 (예: Java, Python, C#, etc.)
-- `-o`: 생성된 코드를 저장할 출력 파일 경로
-- `-p`: AI 공급자 선택 (`google` 또는 `ollama`, 기본값: `google`)
+- `-o`: 생성된 코드를 저장할 출력 파일 경로 (기본값: `code.out`)
+- `-p`: AI 공급자 선택 (`google` 또는 `ollama`, 기본값: `ollama`)
 
 **사용 예제:**
 

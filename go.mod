@@ -1,4 +1,4 @@
-module i2l
+module github.com/snowmerak/i2l
 
 go 1.25.1
 
