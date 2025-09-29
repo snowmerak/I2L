@@ -33,7 +33,7 @@ func main() {
 		fmt.Println(t.String())
 	}
 
-	codeResult, err := il.GenerateCodeFromGraph(ctx, "Java", graph)
+	codeResult, err := il.GenerateCodeFromGraph(ctx, "Typescript", graph)
 	if err != nil {
 		panic(err)
 	}
