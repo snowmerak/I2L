@@ -26,9 +26,7 @@ func DefaultOllamaRAG(ctx context.Context) (*I2L, error) {
 	}
 
 	g := genkit.Init(ctx,
-		genkit.WithPlugins(o, &googlegenai.GoogleAI{
-			APIKey: os.Getenv("GEMINI_API_KEY"),
-		}),
+		genkit.WithPlugins(o),
 	)
 
 	gos, err := models.OllamaGptOss20b(g)
